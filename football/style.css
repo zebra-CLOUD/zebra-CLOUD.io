@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* ===== 导航 ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.6);
+}
+
+nav a {
+    color: #aaa;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* ===== 区块 ===== */
+.section {
+    padding: 100px 60px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== 文字框（核心） ===== */
+.text-box {
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 15px;
+    color: #bbb;
+    background: rgba(255,255,255,0.03);
+    margin-bottom: 20px;
+}
+
+/* ===== 图片统一规格（重点🔥） ===== */
+.img-box img {
+    width: 100%;
+    height: 550px;        /* 统一高度 */
+    object-fit: cover;    /* 自动裁剪 */
+    border-radius: 15px;
+}
+
+/* ===== 三列布局 ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+/* ===== 图片墙 ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+/* 手机适配 */
+@media (max-width: 768px) {
+    .grid, .gallery {
+        grid-template-columns: 1fr;
+    }
+}
